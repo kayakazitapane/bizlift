@@ -1,0 +1,1361 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #173c32;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+}
+
+.navbar {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  background: #ffffff;
+  border-bottom: 1px solid #edf1ee;
+}
+
+.logo {
+  font-family: 'Manrope', sans-serif;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #173c32;
+}
+
+.logo span {
+  color: #43a875;
+}
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #596b62;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #269660;
+}
+
+.nav-button,
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #176c49;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-button {
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+  background: #105438;
+  transform: translateY(-2px);
+}
+
+.hero {
+  min-height: 580px;
+  padding: 85px 10%;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 70px;
+  background:
+    radial-gradient(ellipse at 90% 10%, #dff5e7 0, transparent 35%),
+    #f5faf6;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: #258558;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #173c32;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(42px, 5vw, 65px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  color: #36a56c;
+}
+
+.hero-description {
+  max-width: 510px;
+  margin: 24px 0 30px;
+  color: #65766c;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 49px;
+  padding: 0 20px;
+  font-size: 13px;
+}
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d6e2d9;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #244a39;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.secondary-button:hover {
+  background: #e9f4ec;
+}
+
+.hero-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 34px;
+  color: #65766c;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.hero-note span {
+  font-size: 21px;
+}
+
+.hero-card {
+  padding: 35px;
+  border: 1px solid #e3ece4;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 25px 65px rgba(28, 73, 48, 0.09);
+}
+
+.card-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 26px;
+  border-radius: 14px;
+  background: #e4f5e9;
+  font-size: 27px;
+}
+
+.card-label {
+  margin: 0 0 10px;
+  color: #30925e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.hero-card h2 {
+  margin: 0 0 12px;
+  color: #173c32;
+  font-family: 'Manrope', sans-serif;
+  font-size: 27px;
+  line-height: 1.4;
+  letter-spacing: -0.7px;
+}
+
+.hero-card > p:not(.card-label) {
+  margin: 0;
+  color: #738177;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.progress-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 17px 0;
+  border-bottom: 1px solid #edf1ee;
+  color: #385748;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.progress-item:first-of-type {
+  margin-top: 18px;
+}
+
+.progress-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.progress-item span:last-child {
+  color: #2b9b61;
+  font-weight: 800;
+}
+
+.section {
+  padding: 85px 10%;
+}
+
+.section-heading {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.section-heading h2,
+.business-section h2,
+.about-section h2 {
+  margin: 0;
+  color: #173c32;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(29px, 3vw, 39px);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -1.5px;
+}
+
+.section-heading > p:last-child,
+.business-section > div:first-child > p:last-child,
+.about-section > p:last-child {
+  color: #6d7c72;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  padding: 30px;
+  border: 1px solid #e7eee8;
+  border-radius: 14px;
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(28, 73, 48, 0.08);
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  border-radius: 13px;
+  background: #eaf6ed;
+  font-size: 25px;
+}
+
+.feature-card h3 {
+  margin: 0 0 12px;
+  color: #214735;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #718075;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.business-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: 60px;
+  background: #f5faf6;
+}
+
+.business-grid {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  border: 1px dashed #c9dbce;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #718075;
+  text-align: center;
+  font-size: 13px;
+}
+
+.about-section {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-section .eyebrow {
+  margin-bottom: 15px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 30px 8%;
+  border-top: 1px solid #e7eee8;
+  background: #ffffff;
+}
+
+.footer .logo {
+  font-size: 24px;
+}
+
+.footer p {
+  margin: 0;
+  color: #748177;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 20px 5%;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .hero {
+    padding: 65px 6%;
+    gap: 35px;
+  }
+
+  .section {
+    padding: 70px 6%;
+  }
+
+  .feature-grid {
+    gap: 15px;
+  }
+
+  .feature-card {
+    padding: 22px;
+  }
+
+  .business-section {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    min-height: auto;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 20px 6%;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .nav-button {
+    padding: 10px 13px;
+    font-size: 12px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 60px 6%;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-card {
+    padding: 28px;
+  }
+
+  .section {
+    padding: 65px 6%;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 26px;
+  }
+
+  .business-section {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 6%;
+  }
+}
+
+/* ========================================
+   BUSINESS REGISTRATION FORM
+======================================== */
+
+.registration-section {
+  background: #f5faf6;
+}
+
+.registration-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #e3ece4;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(28, 73, 48, 0.06);
+}
+
+.registration-form label {
+  margin-top: 8px;
+  color: #244a39;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d8e4da;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #173c32;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.registration-form input:focus,
+.registration-form select:focus,
+.registration-form textarea:focus {
+  border-color: #36a56c;
+  box-shadow: 0 0 0 3px rgba(54, 165, 108, 0.12);
+}
+
+.registration-form textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.registration-form .primary-button {
+  min-height: 48px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.registration-form .primary-button:hover {
+  transform: translateY(-1px);
+}
+
+.registration-form .primary-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.registration-form [role="status"] {
+  margin: 8px 0 0;
+  color: #176c49;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Mobile-friendly registration form */
+@media (max-width: 600px) {
+  .registration-form {
+    padding: 22px;
+    border-radius: 12px;
+  }
+
+  .registration-form input,
+  .registration-form select,
+  .registration-form textarea {
+    font-size: 16px;
+  }
+}
+
+/* ========================================
+   BIZLIFT BUSINESS PLANNER
+======================================== */
+
+.planner-section {
+  background: #ffffff;
+}
+
+.planner-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.planner-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+  background: #f5faf6;
+  border: 1px solid #e3ece4;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(28, 73, 48, 0.06);
+}
+
+.planner-form label {
+  margin-top: 8px;
+  color: #244a39;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.planner-form input,
+.planner-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d8e4da;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #173c32;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.planner-form input:focus,
+.planner-form textarea:focus {
+  border-color: #36a56c;
+  box-shadow: 0 0 0 3px rgba(54, 165, 108, 0.12);
+}
+
+.planner-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.planner-form .primary-button {
+  min-height: 48px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Generated business plan */
+
+.generated-plan {
+  margin-top: 32px;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #dce9df;
+  border-left: 5px solid #36a56c;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(28, 73, 48, 0.06);
+}
+
+.generated-plan h3 {
+  margin: 0 0 24px;
+  color: #173c32;
+  font-size: 24px;
+}
+
+.generated-plan > div {
+  margin-bottom: 20px;
+}
+
+.generated-plan strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #244a39;
+  font-size: 14px;
+}
+
+.generated-plan p {
+  color: #52665b;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.generated-plan .planner-note {
+  margin-top: 24px;
+  padding: 14px;
+  background: #f5faf6;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.generated-plan .secondary-button {
+  display: inline-block;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+/* Mobile-friendly planner */
+
+@media (max-width: 600px) {
+  .planner-form,
+  .generated-plan {
+    padding: 22px;
+  }
+
+  .planner-form input,
+  .planner-form textarea {
+    font-size: 16px;
+  }
+
+  .generated-plan h3 {
+    font-size: 21px;
+  }
+}
+
+/* Print only the generated business plan */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .generated-plan,
+  .generated-plan * {
+    visibility: visible;
+  }
+
+  .generated-plan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+
+  .generated-plan button {
+    display: none;
+  }
+}
+
+/* ========================================
+   BIZLIFT RESOURCES AND OPPORTUNITIES
+======================================== */
+
+.resources-section {
+  background: #f5faf6;
+  padding: 80px 8%;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e0ebe2;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(23, 60, 50, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(23, 60, 50, 0.1);
+}
+
+.resource-category {
+  display: inline-block;
+  padding: 7px 12px;
+  margin-bottom: 18px;
+  color: #247448;
+  background: #e8f6ed;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.resource-card h3 {
+  margin: 0 0 12px;
+  color: #173c32;
+  font-size: 21px;
+}
+
+.resource-card p {
+  margin: 0 0 20px;
+  color: #52665b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.resource-link {
+  display: inline-block;
+  margin-top: auto;
+  color: #21834d;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.resource-link:hover {
+  color: #145c35;
+  text-decoration: underline;
+}
+
+.resource-link:focus-visible {
+  outline: 2px solid #21834d;
+  outline-offset: 4px;
+}
+
+.resources-note {
+  max-width: 900px;
+  margin: 30px auto 0;
+  color: #63746a;
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .resources-section {
+    padding: 55px 6%;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 30px;
+  }
+
+  .resource-card {
+    padding: 24px;
+  }
+
+  .resource-card h3 {
+    font-size: 19px;
+  }
+}
+
+/* ========================================
+   BIZLIFT BUSINESS TIPS SECTION
+======================================== */
+
+.business-tips-section {
+  background: #ffffff;
+  padding: 80px 8%;
+}
+
+.business-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+.business-tip-card {
+  padding: 28px;
+  background: #f5faf6;
+  border: 1px solid #e0ebe2;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(23, 60, 50, 0.05);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.business-tip-card:hover {
+  transform: translateY(-5px);
+  border-color: #36a56c;
+  box-shadow: 0 14px 30px rgba(23, 60, 50, 0.1);
+}
+
+.business-tip-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.business-tip-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  color: #ffffff;
+  background: #21834d;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.business-tip-category {
+  padding: 7px 10px;
+  color: #247448;
+  background: #e4f4e9;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.business-tip-card h3 {
+  margin: 0 0 14px;
+  color: #173c32;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.business-tip-card p {
+  margin: 0;
+  color: #52665b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Tablet screens */
+
+@media (max-width: 950px) {
+  .business-tips-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile screens */
+
+@media (max-width: 600px) {
+  .business-tips-section {
+    padding: 55px 6%;
+  }
+
+  .business-tips-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 30px;
+  }
+
+  .business-tip-card {
+    padding: 24px;
+  }
+
+  .business-tip-card h3 {
+    font-size: 19px;
+  }
+}
+
+/* ========================================
+   BIZLIFT BUSINESS DASHBOARD
+======================================== */
+
+.dashboard-section {
+  padding: 80px 8%;
+  background: #f5faf6;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.dashboard-stat-card {
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e0ebe2;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(23, 60, 50, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(23, 60, 50, 0.1);
+}
+
+.dashboard-stat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  background: #e4f4e9;
+  border-radius: 12px;
+  font-size: 24px;
+}
+
+.dashboard-stat-card > p {
+  margin: 0 0 10px;
+  color: #52665b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dashboard-stat-card h3 {
+  margin: 0;
+  color: #21834d;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.dashboard-recent {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e0ebe2;
+  border-radius: 16px;
+}
+
+.dashboard-recent > h3 {
+  margin: 0 0 24px;
+  color: #173c32;
+  font-size: 22px;
+}
+
+.dashboard-business-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dashboard-business-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background: #f5faf6;
+  border: 1px solid #e8f0e9;
+  border-radius: 12px;
+}
+
+.dashboard-business-item h4 {
+  margin: 0 0 8px;
+  color: #173c32;
+  font-size: 17px;
+}
+
+.dashboard-business-item p {
+  margin: 0;
+  color: #52665b;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.dashboard-category {
+  flex-shrink: 0;
+  padding: 7px 12px;
+  color: #247448;
+  background: #e4f4e9;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dashboard-empty {
+  padding: 20px;
+  color: #52665b;
+  background: #f5faf6;
+  border-radius: 10px;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-stat-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-section {
+    padding: 55px 6%;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  .dashboard-stat-card:last-child {
+    grid-column: auto;
+  }
+
+  .dashboard-stat-card {
+    padding: 24px;
+  }
+
+  .dashboard-stat-card h3 {
+    font-size: 32px;
+  }
+
+  .dashboard-recent {
+    padding: 20px;
+  }
+
+  .dashboard-business-item {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .dashboard-category {
+    white-space: normal;
+  }
+}
+
+/* ========================================
+   STEP 10: BUSINESS SEARCH AND FILTERS
+======================================== */
+
+.business-search-controls {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.business-search-input,
+.business-category-select {
+  min-height: 48px;
+  padding: 12px 15px;
+  border: 1px solid #d6e2d9;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #173c32;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.business-search-input {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.business-category-select {
+  flex: 0 1 210px;
+  min-width: 170px;
+  cursor: pointer;
+}
+
+.business-search-input:focus,
+.business-category-select:focus {
+  border-color: #36a56c;
+  box-shadow: 0 0 0 3px rgba(54, 165, 108, 0.12);
+}
+
+.business-search-controls .secondary-button {
+  min-height: 48px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.business-results-count {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #52665b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Business listing layout */
+
+.business-grid {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 150px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #52665b;
+  text-align: left;
+}
+
+.business-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  width: 100%;
+}
+
+.business-card {
+  min-width: 0;
+  padding: 26px;
+  border: 1px solid #e0ebe2;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(23, 60, 50, 0.05);
+  overflow-wrap: anywhere;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.business-card:hover {
+  transform: translateY(-4px);
+  border-color: #b8d9c2;
+  box-shadow: 0 14px 30px rgba(23, 60, 50, 0.09);
+}
+
+.business-card h3 {
+  margin: 0 0 12px;
+  color: #173c32;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.business-card > p:last-child {
+  margin: 12px 0 0;
+  color: #52665b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.business-category {
+  display: inline-block;
+  margin: 0;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #e4f4e9;
+  color: #247448;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* No search results */
+
+.no-business-results {
+  width: 100%;
+  padding: 32px 24px;
+  border: 1px dashed #c9dbce;
+  border-radius: 12px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.no-business-results h3 {
+  margin: 0 0 12px;
+  color: #173c32;
+  font-family: 'Manrope', sans-serif;
+  font-size: 21px;
+}
+
+.no-business-results p {
+  margin: 0 0 20px;
+  color: #65766c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.no-business-results .secondary-button {
+  cursor: pointer;
+}
+
+/* Keyboard accessibility */
+
+.business-search-controls button:focus-visible,
+.business-card:focus-visible,
+.no-business-results button:focus-visible {
+  outline: 2px solid #21834d;
+  outline-offset: 3px;
+}
+
+/* Tablet screens */
+
+@media (max-width: 900px) {
+  .business-search-controls {
+    gap: 12px;
+  }
+
+  .business-search-input {
+    flex-basis: 220px;
+  }
+
+  .business-cards {
+    gap: 16px;
+  }
+
+  .business-card {
+    padding: 22px;
+  }
+}
+
+/* Mobile screens */
+
+@media (max-width: 650px) {
+  .business-search-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .business-search-input,
+  .business-category-select,
+  .business-search-controls .secondary-button {
+    width: 100%;
+    min-width: 0;
+    flex: auto;
+    font-size: 16px;
+  }
+
+  .business-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .business-card {
+    padding: 22px;
+  }
+
+  .business-card h3 {
+    font-size: 19px;
+  }
+
+  .no-business-results {
+    padding: 25px 18px;
+  }
+}

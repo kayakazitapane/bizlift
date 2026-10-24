@@ -1,0 +1,28 @@
+{
+  "businesses": [
+    {
+      "id": 1,
+      "name": "Fresh Start Bakery",
+      "category": "Food and Baking",
+      "description": "A small business selling fresh bread and cakes."
+    },
+    {
+      "id": 2,
+      "name": "Smart Tech Solutions",
+      "category": "Technology",
+      "description": "A business providing computer support and IT services."
+    },
+    {
+      "id": 3,
+      "name": "kayakazi jewellery",
+      "category": "Retail",
+      "description": "i am selling jewellery"
+    },
+    {
+      "id": 4,
+      "name": "Test Business",
+      "category": "Retail",
+      "description": "Testing permanent storage in BizLift."
+    }
+  ]
+}
